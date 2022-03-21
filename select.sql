@@ -65,3 +65,8 @@ ORDER BY SUBSTR(name,length(name)-2,3),ID;
 SELECT name
 FROM EMPLOYEE
 ORDER BY name ASC;
+
+###Employee Salaries
+SELECT name
+FROM EMPLOYEE
+WHERE salary > 2000 AND months < 10; 
