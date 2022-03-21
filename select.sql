@@ -60,3 +60,8 @@ SELECT NAME
 FROM STUDENTS
 WHERE MARKS > 75
 ORDER BY SUBSTR(name,length(name)-2,3),ID;
+
+###Employee Names
+SELECT name
+FROM EMPLOYEE
+ORDER BY name ASC;
