@@ -54,3 +54,9 @@ WHERE upper(SUBSTR(CITY,1,1)) NOT IN ('A','E','I','O','U') AND lower(SUBSTR(CITY
 ###Weather Observation Station 12
 SELECT DISTINCT CITY FROM STATION
 WHERE upper(SUBSTR(CITY,1,1)) NOT IN ('A','E','I','O','U') AND lower(SUBSTR(CITY,1,1)) NOT IN ('a','e','i','o','u') AND (upper(SUBSTR(CITY,LENGTH(CITY),1)) NOT IN ('A','E','I','O','U') AND  lower(SUBSTR(CITY,LENGTH(CITY),1)) NOT IN ('a','e','i','o','u')); 
+
+###Higher Than 75 Marks
+SELECT NAME 
+FROM STUDENTS
+WHERE MARKS > 75
+ORDER BY SUBSTR(name,length(name)-2,3),ID;
