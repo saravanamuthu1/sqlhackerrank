@@ -47,3 +47,10 @@ SELECT DISTINCT CITY FROM STATION WHERE upper(SUBSTR(CITY,1,1)) NOT IN ('A','E',
 ###Weather Observation Station 10
 SELECT DISTINCT CITY FROM STATION WHERE UPPER(SUBSTR(CITY, LENGTH(CITY), 1)) NOT IN ('A','E','I','O','U') AND LOWER(SUBSTR(CITY, LENGTH(CITY),1)) NOT IN ('a','e','i','o','u');    
 
+###Weather Observation Station 11
+SELECT DISTINCT CITY FROM STATION
+WHERE upper(SUBSTR(CITY,1,1)) NOT IN ('A','E','I','O','U') AND lower(SUBSTR(CITY,1,1)) NOT IN ('a','e','i','o','u') OR (upper(SUBSTR(CITY,LENGTH(CITY),1)) NOT IN ('A','E','I','O','U') AND  lower(SUBSTR(CITY,LENGTH(CITY),1)) NOT IN ('a','e','i','o','u')); 
+
+###Weather Observation Station 12
+SELECT DISTINCT CITY FROM STATION
+WHERE upper(SUBSTR(CITY,1,1)) NOT IN ('A','E','I','O','U') AND lower(SUBSTR(CITY,1,1)) NOT IN ('a','e','i','o','u') AND (upper(SUBSTR(CITY,LENGTH(CITY),1)) NOT IN ('A','E','I','O','U') AND  lower(SUBSTR(CITY,LENGTH(CITY),1)) NOT IN ('a','e','i','o','u')); 
